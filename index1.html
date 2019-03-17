@@ -4,26 +4,32 @@
     <meta charset="utf-8">
     <title>NFL Arrest Data</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
-  </head>
-  <body>
+    <link rel="stylesheet" href="/home/minty/Projects/vue_sampl/index1.css">
+</head>
+
+<body>
     <div class="container" id="app">
-      <h3 class="text-center">NFL Player Arrest Data</h3>
-      <div class="columns medium-3" v-for="result in results">
+      <h3 class="text-center">Player Search</h3>
+      <div class="search-bar">
+        Search For a Player's Arrest Data:
+        <input type="text" v-model.lazy="name" v-debounce="1000" placeholder="Enter Player's First and Last Name"></input>
+     </div>
+
+   
+      <div class="columns medium-4" v-for="result in results">
         <div class="card">
           <div class="card-divider">
-           <p>Player: {{ result.Name }}</p>
+           <p>Player: {{ name }}</p>
           </div>
           <div class="card-section">
-            <p>Team Name: {{ result.Team_name }}</p>
-            <p>Position: {{ result.Position }}</p>
+            <p>Crime: {{ result.category }}</p>
             <p>Arrest Count: {{ result.arrest_count }}</p>
           </div>
         </div>
-      </div>
-    </div>
+     </div>
+
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/vue"></script>
-    <script src="app.js"></script>
+    <script src="app1.js"></script>
   </body>
 </html>
-
