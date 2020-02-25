@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>NFL Arrest Data</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
-    <link rel="stylesheet" href="/home/minty/Projects/vue_sampl/index1.css">
+    <link rel="stylesheet" href="/home/userone/Projects/nflarrests/index1.css">
 </head>
 
 <body>
@@ -15,7 +15,7 @@
         <input type="text" v-model.lazy="name" v-debounce="1000" placeholder="Enter Player's First and Last Name"></input>
      </div>
 
-   
+
       <div class="columns medium-4" v-for="result in results">
         <div class="card">
           <div class="card-divider">
@@ -30,6 +30,6 @@
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/vue"></script>
-    <script src="app1.js"></script>
+    <script src="player-search.js"></script>
   </body>
 </html>

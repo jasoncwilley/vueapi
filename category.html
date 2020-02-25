@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>NFL Arrest Data</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">
+  </head>
+  <body>
+    <div class="container" id="app">
+      <h3 class="text-center">NFL Player Arrest Data</h3>
+      <select v-model="selected">
+      <option v-for="option in options" v-bind:value="option.value">
+        {{ option.text }}
+      </option>
+    </select>
+    <span>Selected: {{ selected }}</span>
+
+          </div>
+          <div class="columns medium-3" v-for="result in results">
+            <div class="card">
+              <div class="card-divider">
+          <div class="card-section">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="category.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+<select v-model="selected">
+  <option disabled value="">Please select one</option>
+  <option>A</option>
+  <option>B</option>
+  <option>C</option>
+</select>
+<span>Selected: {{ selected }}</span>
